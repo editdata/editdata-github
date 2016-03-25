@@ -68,3 +68,20 @@ test('request parsed CSV contents of a repo', function (t) {
     t.equal(typeof body, 'object')
   })
 })
+
+test('create a branch', function (t) {
+  t.plan(3)
+
+  var options = {
+    owner: 'editdatabot',
+    repo: 'test',
+    ref: 'refs/heads/test-' + Date.now(),
+    sha: 'b6ceaa8cd4ae8f87c620f2504a0d3a42bd7d923f'
+  }
+
+  gh.branch.create(options, function (err, res, body) {
+    t.notOk(err)
+    t.ok(res)
+    t.ok(body)
+  })
+})
