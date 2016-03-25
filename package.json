@@ -7,7 +7,10 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "standard && tape tests/*.js | tap-spec"
+    "lint": "standard",
+    "test:node": "tape tests/*.js | tap-spec",
+    "test:testron": "browserify tests/index.js -t [ envify --GITHUB_ACCESS_TOKEN $GITHUB_ACCESS_TOKEN] | testron | tap-spec",
+    "test": "npm run lint && npm run test:node && npm run test:testron"
   },
   "browser": {
     "request": "xhr"
@@ -24,9 +27,12 @@
   "homepage": "https://github.com/editdata/editdata-github#readme",
   "devDependencies": {
     "documentation-readme": "^2.1.1",
+    "electron-prebuilt": "^0.37.2",
+    "envify": "^3.4.0",
     "standard": "^6.0.8",
     "tap-spec": "^4.1.1",
-    "tape": "^4.5.1"
+    "tape": "^4.5.1",
+    "testron": "^1.2.0"
   },
   "dependencies": {
     "base-64": "^0.1.0",
