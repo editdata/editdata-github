@@ -47,5 +47,21 @@ module.exports = function GitHubClient_contents (options) {
     })
   }
 
+  client.getYAML = function GitHubClient_contents_getYAML (opts, callback) {
+    throw new Error('todo: contents.getYAML')
+  }
+
+  client.putYAML = function GitHubClient_contents_putYAML (opts, callback) {
+    throw new Error('todo: contents.putYAML')
+  }
+
+  client.putJSON = function GitHubClient_contents_putJSON (opts, callback) {
+    throw new Error('todo: contents.putJSON')
+  }
+
+  client.putCSV = function GitHubClient_contents_putCSV (opts, callback) {
+    throw new Error('todo: contents.putCSV')
+  }
+
   return client
 }

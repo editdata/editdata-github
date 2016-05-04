@@ -1,8 +1,14 @@
+var request = require('./request')
+
 module.exports = function GitHubClient (options) {
-  var client = { token: options.token }
+  function gh (opts, callback) {
+    opts.token = opts.token || options.token
+    return request(opts, callback)
+  }
 
-  client.contents = require('./contents')(client)
-  client.branch = require('./branch')(client)
+  gh.contents = require('./contents')(options)
+  gh.branch = require('./branch')(options)
+  gh.fork = require('./fork')(options)
 
-  return client
+  return gh
 }

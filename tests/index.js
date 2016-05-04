@@ -1,5 +1,4 @@
 var test = require('tape')
-var request = require('../request')
 var gh = require('../index')({ token: process.env.GITHUB_ACCESS_TOKEN })
 
 test('request an organization', function (t) {
@@ -11,7 +10,7 @@ test('request an organization', function (t) {
     json: true
   }
 
-  request(options, function (err, res, body) {
+  gh(options, function (err, res, body) {
     t.notOk(err)
     t.ok(res)
     t.ok(body)
@@ -80,6 +79,21 @@ test('create a branch', function (t) {
   }
 
   gh.branch.create(options, function (err, res, body) {
+    t.notOk(err)
+    t.ok(res)
+    t.ok(body)
+  })
+})
+
+test('create a fork', function (t) {
+  t.plan(3)
+
+  var options = {
+    owner: 'editdatabot',
+    repo: 'test'
+  }
+
+  gh.fork.create(options, function (err, res, body) {
     t.notOk(err)
     t.ok(res)
     t.ok(body)
