@@ -86,9 +86,9 @@ The above example is still too verbose, though much of the verbosity is due to t
 Expect the API to change considerably.
 
 ## Tests
-Right now tests rely on an access token & collaborator access on []().
+Right now tests rely on an access token & collaborator access on [editdatabot/test](https://github.com/editdatabot/test).
 
-If you're interested in contributing, make an issue on this repository.
+If you're interested in contributing, [make an issue on this repository](https://github.com/editdata/editdata-github/issues/new).
 
 ### Running the tests:
 
