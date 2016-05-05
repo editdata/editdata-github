@@ -37,8 +37,12 @@
   "dependencies": {
     "base-64": "^0.1.0",
     "csv-parser": "^1.9.3",
+    "csv-write-stream": "^2.0.0",
+    "from2-array": "0.0.4",
     "from2-string": "^1.1.0",
     "request": "^2.69.0",
+    "through2": "^2.0.1",
+    "utf8": "^2.1.1",
     "xhr": "^2.2.0"
   }
 }

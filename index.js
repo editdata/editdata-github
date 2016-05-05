@@ -9,6 +9,7 @@ module.exports = function GitHubClient (options) {
   gh.contents = require('./contents')(options)
   gh.branch = require('./branch')(options)
   gh.fork = require('./fork')(options)
+  gh.pullRequest = require('./pull-request')(options)
 
   return gh
 }
