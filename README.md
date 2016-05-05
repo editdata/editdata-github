@@ -18,7 +18,7 @@ This example shows:
 - creating a pull request against the `master` branch
 
 ```js
-var gh = require('editdata-github')
+var gh = require('editdata-github')({ token: process.env.GITHUB_ACCESS_TOKEN })
 var branch = 'refs/heads/test-' + Date.now()
 createBranch()
 

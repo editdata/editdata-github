@@ -1,6 +1,6 @@
 {
   "name": "editdata-github",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "an api client for github that performs actions needed by editdata applications",
   "main": "index.js",
   "directories": {
